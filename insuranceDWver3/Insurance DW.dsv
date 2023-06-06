@@ -1,0 +1,388 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dbc5787d-cf9d-42e8-8fee-35592836c1ba" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Insurance DW</ID>
+  <Name>Insurance DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Insurance DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Insurance_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Insurance_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="7e1c1bc5-815a-4306-a181-3dd00af9a4b4">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Branch" msprop:DbTableName="Branch" msprop:FriendlyName="Branch" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="1cae3061-50c4-4b49-a1b9-8bb1a86d92ec">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Branch_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Branch_ID" msprop:DbColumnName="Branch_ID" msprop:design-time-name="49aa2d27-057e-473e-b8bb-632f10df2ba5" type="xs:int" />
+                  <xs:element name="City" msprop:FriendlyName="City" msprop:DbColumnName="City" msprop:design-time-name="ae5c08f4-4aad-4348-a616-eb24503bdae0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City_Size" msprop:FriendlyName="City_Size" msprop:DbColumnName="City_Size" msprop:design-time-name="bf4ebc27-1149-4c6f-87b1-3f64130b21bc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Car" msprop:DbTableName="Car" msprop:FriendlyName="Car" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="98abd819-74e1-4ff4-a68a-1d802ccd56b0">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Car_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Car_ID" msprop:DbColumnName="Car_ID" msprop:design-time-name="ace46762-99ce-4f91-b76b-038c99923a89" type="xs:int" />
+                  <xs:element name="Registration_Number" msprop:FriendlyName="Registration_Number" msprop:DbColumnName="Registration_Number" msprop:design-time-name="92510923-509a-49d5-a0a6-15ace135b4be" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ref_Prod_Date_ID" msprop:FriendlyName="ref_Prod_Date_ID" msprop:DbColumnName="ref_Prod_Date_ID" msprop:design-time-name="02917976-e274-4923-88cc-96f72b4c0cf5" type="xs:int" minOccurs="0" />
+                  <xs:element name="Engine_Size" msprop:FriendlyName="Engine_Size" msprop:DbColumnName="Engine_Size" msprop:design-time-name="53483042-ce21-4ea1-8f81-2e254aae8b39" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Horsepower" msprop:FriendlyName="Horsepower" msprop:DbColumnName="Horsepower" msprop:design-time-name="f0503451-cfc6-4599-9d5e-9a24024586e4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Manufacturer" msprop:FriendlyName="Manufacturer" msprop:DbColumnName="Manufacturer" msprop:design-time-name="1006de4f-c738-47fc-b842-9e0a714b6d75" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Model" msprop:FriendlyName="Model" msprop:DbColumnName="Model" msprop:design-time-name="a3ce5a2b-a5a5-4215-852f-0c9c6bb17b60" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Claim_Processing" msprop:DbTableName="Claim_Processing" msprop:FriendlyName="Claim_Processing" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="fb811929-066a-488c-9dfe-81c12f6d1081">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ref_Junk_ID" msprop:FriendlyName="ref_Junk_ID" msprop:DbColumnName="ref_Junk_ID" msprop:design-time-name="15629c74-441b-45fb-9a75-cad9278874a2" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Car_ID" msprop:FriendlyName="ref_Car_ID" msprop:DbColumnName="ref_Car_ID" msprop:design-time-name="b93b6dcc-abda-4eef-bed0-b7ab165d0cf5" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Perpretator_ID" msprop:FriendlyName="ref_Perpretator_ID" msprop:DbColumnName="ref_Perpretator_ID" msprop:design-time-name="1deb394c-715b-4c7c-8f16-4ac9f24f9219" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Insurance_Agent_ID" msprop:FriendlyName="ref_Insurance_Agent_ID" msprop:DbColumnName="ref_Insurance_Agent_ID" msprop:design-time-name="402f70e5-e610-494f-b1fc-0ac9c6e84eed" type="xs:int" minOccurs="0" />
+                  <xs:element name="Amount_Asked" msprop:FriendlyName="Amount_Asked" msprop:DbColumnName="Amount_Asked" msprop:design-time-name="2d821911-014f-4732-9d44-203df5e80ea1" type="xs:int" minOccurs="0" />
+                  <xs:element name="Compensation" msprop:FriendlyName="Compensation" msprop:DbColumnName="Compensation" msprop:design-time-name="89a4cd59-0cda-44a5-bc0d-1fcd2236eb69" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Submission_Date_ID" msprop:FriendlyName="ref_Submission_Date_ID" msprop:DbColumnName="ref_Submission_Date_ID" msprop:design-time-name="50497d45-15c2-4cdb-8431-3926cc4225dc" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Finish_Date_ID" msprop:FriendlyName="ref_Finish_Date_ID" msprop:DbColumnName="ref_Finish_Date_ID" msprop:design-time-name="5c0c3270-fe73-4320-91b4-179737b71cf7" type="xs:int" minOccurs="0" />
+                  <xs:element name="Claim_No" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Claim_No" msprop:DbColumnName="Claim_No" msprop:design-time-name="72ea7e05-7006-453b-a295-b1983781e9e4" type="xs:int" />
+                  <xs:element name="Survey_AVG_L" msprop:FriendlyName="Survey_AVG_L" msprop:DbColumnName="Survey_AVG_L" msprop:design-time-name="1ce6bfdf-7cde-42a5-990e-2fd483758f4b" type="xs:double" minOccurs="0" />
+                  <xs:element name="Survey_Ease_H" msprop:FriendlyName="Survey_Ease_H" msprop:DbColumnName="Survey_Ease_H" msprop:design-time-name="3965bdb6-8938-4716-ba0f-683c29178949" type="xs:double" minOccurs="0" />
+                  <xs:element name="Claim_Lifetime" msprop:FriendlyName="Claim_Lifetime" msprop:DbColumnName="Claim_Lifetime" msprop:design-time-name="6c02cea5-0d8b-4685-ba8d-f495d8bec71e" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Event_ID" msprop:FriendlyName="ref_Event_ID" msprop:DbColumnName="ref_Event_ID" msprop:design-time-name="339904bd-8dfd-4a3b-b6b3-770bebfe3226" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Customer" msprop:DbTableName="Customer" msprop:FriendlyName="Customer" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="2a39eca9-528a-4f70-9458-d2cfa7a91dba">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Customer_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Customer_ID" msprop:DbColumnName="Customer_ID" msprop:design-time-name="0cba54d9-2e2b-4a9e-a744-145704f52ee0" type="xs:int" />
+                  <xs:element name="PESEL" msprop:FriendlyName="PESEL" msprop:DbColumnName="PESEL" msprop:design-time-name="c9387607-5b3a-40e6-97ab-7a2749629d09" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="11" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sex" msprop:FriendlyName="Sex" msprop:DbColumnName="Sex" msprop:design-time-name="232820a1-9a2e-44d4-a221-03647740e517" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="6" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Name_and_Surname" msprop:FriendlyName="Name_and_Surname" msprop:DbColumnName="Name_and_Surname" msprop:design-time-name="79a9e32f-42fc-4179-b6d6-629993a51947" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Age" msprop:FriendlyName="Age" msprop:DbColumnName="Age" msprop:design-time-name="b819fa97-914b-4554-b7b3-efdca6e5c80c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Driving_License_Time" msprop:FriendlyName="Driving_License_Time" msprop:DbColumnName="Driving_License_Time" msprop:design-time-name="57a04a54-12a6-41d2-9be8-10ba5d1c516d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="isCurrent" msprop:FriendlyName="isCurrent" msprop:DbColumnName="isCurrent" msprop:design-time-name="976488fe-f76f-4198-9b4d-f0eee8fb1229" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Date_" msprop:DbTableName="Date_" msprop:FriendlyName="Date_" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="35c792a2-3c90-4533-aab7-dcbafba1914e">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Date_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Date_ID" msprop:DbColumnName="Date_ID" msprop:design-time-name="70f3b160-9396-4356-861d-b97cb976fbe9" type="xs:int" />
+                  <xs:element name="Day_" msprop:FriendlyName="Day_" msprop:DbColumnName="Day_" msprop:design-time-name="be8c4ffd-7ee3-413d-ba01-814c3afd1726" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month_Numeric" msprop:FriendlyName="Month_Numeric" msprop:DbColumnName="Month_Numeric" msprop:design-time-name="1b69ad16-bdf0-4c36-82e9-f5a7501c0978" type="xs:int" minOccurs="0" />
+                  <xs:element name="Year_" msprop:FriendlyName="Year_" msprop:DbColumnName="Year_" msprop:design-time-name="9699c30f-40ea-42e6-b3c8-4ea648592e5e" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month_" msprop:FriendlyName="Month_" msprop:DbColumnName="Month_" msprop:design-time-name="3fab208c-eb8c-41ac-9f20-cc3bb80aa9e2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Date_" msprop:FriendlyName="Date_" msprop:DbColumnName="Date_" msprop:design-time-name="650c9546-9c9f-4108-a487-8ca61212ef08" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Event_" msprop:DbTableName="Event_" msprop:FriendlyName="Event_" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="7abb7330-1f27-4426-ac6b-704f5ee2b5d9">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Event_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Event_ID" msprop:DbColumnName="Event_ID" msprop:design-time-name="3b871451-3682-425f-b127-879d2a309fc8" type="xs:int" />
+                  <xs:element name="ref_Event_Date_ID" msprop:FriendlyName="ref_Event_Date_ID" msprop:DbColumnName="ref_Event_Date_ID" msprop:design-time-name="a82a14c9-5243-47cc-ac07-639e16751974" type="xs:int" minOccurs="0" />
+                  <xs:element name="Country" msprop:FriendlyName="Country" msprop:DbColumnName="Country" msprop:design-time-name="6b476762-44fb-4f98-b144-ffbc3f540b2c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Voivodeship" msprop:FriendlyName="Voivodeship" msprop:DbColumnName="Voivodeship" msprop:design-time-name="37b909d8-5bd2-4381-b808-d049f362207e" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City" msprop:FriendlyName="City" msprop:DbColumnName="City" msprop:design-time-name="c4a254a7-fc11-4654-9a81-5b144e520e43" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Street" msprop:FriendlyName="Street" msprop:DbColumnName="Street" msprop:design-time-name="19d70be5-a962-4df1-be56-b71743a87945" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Insurance" msprop:DbTableName="Insurance" msprop:FriendlyName="Insurance" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="a42db81e-0c35-4fc1-b707-b55a5071ce63">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Insurance_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Insurance_ID" msprop:DbColumnName="Insurance_ID" msprop:design-time-name="f123fcb4-51f1-44c5-8ca8-84c31eb7c0b3" type="xs:int" />
+                  <xs:element name="ref_Signing_Date_ID" msprop:FriendlyName="ref_Signing_Date_ID" msprop:DbColumnName="ref_Signing_Date_ID" msprop:design-time-name="86333361-9408-49fc-a75b-f5b85ffcbb5b" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Expiration_Date_ID" msprop:FriendlyName="ref_Expiration_Date_ID" msprop:DbColumnName="ref_Expiration_Date_ID" msprop:design-time-name="a2a615fa-83e1-44a7-bc93-3b8f87d8366c" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Customer_ID" msprop:FriendlyName="ref_Customer_ID" msprop:DbColumnName="ref_Customer_ID" msprop:design-time-name="3ee84c08-60df-4f51-b5a3-be9db09dbd68" type="xs:int" minOccurs="0" />
+                  <xs:element name="ref_Car_ID" msprop:FriendlyName="ref_Car_ID" msprop:DbColumnName="ref_Car_ID" msprop:design-time-name="ac966e1b-1433-4bdb-909f-832a85d35f8b" type="xs:int" minOccurs="0" />
+                  <xs:element name="Amount" msprop:FriendlyName="Amount" msprop:DbColumnName="Amount" msprop:design-time-name="f1cad9af-5bfe-4355-91a2-407f99beacec" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Insurance_Agent" msprop:DbTableName="Insurance_Agent" msprop:FriendlyName="Insurance_Agent" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="76ce195d-311a-4608-a4e2-230823ed1f1d">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Insurance_Agent_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Insurance_Agent_ID" msprop:DbColumnName="Insurance_Agent_ID" msprop:design-time-name="02d7f7c8-e831-42f2-ad67-d659ec935032" type="xs:int" />
+                  <xs:element name="worker_ID" msprop:FriendlyName="worker_ID" msprop:DbColumnName="worker_ID" msprop:design-time-name="eb400a77-07a1-4fdf-b296-85741e32cdfb" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Name_And_Surname" msprop:FriendlyName="Name_And_Surname" msprop:DbColumnName="Name_And_Surname" msprop:design-time-name="d2f2dfd6-2a16-4ab0-814b-7d7cb6182ee0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ref_Branch_ID" msprop:FriendlyName="ref_Branch_ID" msprop:DbColumnName="ref_Branch_ID" msprop:design-time-name="cf3cb488-cc14-45b3-a3f8-1ca7ea4c03e1" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Junk" msprop:DbTableName="Junk" msprop:FriendlyName="Junk" msprop:TableType="Table" msprop:DbSchemaName="dbo" msprop:design-time-name="8a9ad4e3-708d-47f5-ab46-51bd8a01d07a">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Junk_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="Junk_ID" msprop:DbColumnName="Junk_ID" msprop:design-time-name="0dc5c284-6626-46de-a714-0c5471717bd4" type="xs:int" />
+                  <xs:element name="Status_" msprop:FriendlyName="Status_" msprop:DbColumnName="Status_" msprop:design-time-name="3400bf86-9372-47c8-bdfb-81e7ec195be5" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Compensation_Category" msprop:FriendlyName="Compensation_Category" msprop:DbColumnName="Compensation_Category" msprop:design-time-name="d1cd5b11-4c4f-4a0a-99d3-026e44117076" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Survey_Rating_Category" msprop:FriendlyName="Survey_Rating_Category" msprop:DbColumnName="Survey_Rating_Category" msprop:design-time-name="a09ed432-a0f9-42b1-93ca-82b3cd713da6" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Branch" />
+          <xs:field xpath="Branch_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Car_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Car" />
+          <xs:field xpath="Car_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Claim_Processing_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="Claim_No" />
+        </xs:unique>
+        <xs:unique name="dbo_Customer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Customer" />
+          <xs:field xpath="Customer_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Date__Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Date_" />
+          <xs:field xpath="Date_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Event__Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Event_" />
+          <xs:field xpath="Event_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Insurance_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Insurance" />
+          <xs:field xpath="Insurance_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Insurance_Agent_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Insurance_Agent" />
+          <xs:field xpath="Insurance_Agent_ID" />
+        </xs:unique>
+        <xs:unique name="dbo_Junk_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Junk" />
+          <xs:field xpath="Junk_ID" />
+        </xs:unique>
+        <xs:keyref name="FK__Insurance__ref_B__4AC307E8" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Insurance_Agent" />
+          <xs:field xpath="ref_Branch_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Insurance__ref_E__53584DE9" refer="dbo_Date__Constraint1">
+          <xs:selector xpath=".//dbo_Insurance" />
+          <xs:field xpath="ref_Expiration_Date_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Insurance__ref_S__526429B0" refer="dbo_Date__Constraint1">
+          <xs:selector xpath=".//dbo_Insurance" />
+          <xs:field xpath="ref_Signing_Date_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Insurance__ref_C__544C7222" refer="dbo_Customer_Constraint1">
+          <xs:selector xpath=".//dbo_Insurance" />
+          <xs:field xpath="ref_Customer_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Insurance__ref_C__5540965B" refer="dbo_Car_Constraint1">
+          <xs:selector xpath=".//dbo_Insurance" />
+          <xs:field xpath="ref_Car_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Event___ref_Even__4D9F7493" refer="dbo_Date__Constraint1">
+          <xs:selector xpath=".//dbo_Event_" />
+          <xs:field xpath="ref_Event_Date_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Claim_Pro__ref_I__5AF96FB1" refer="dbo_Insurance_Agent_Constraint1">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="ref_Insurance_Agent_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Claim_Pro__ref_J__581D0306" refer="dbo_Junk_Constraint1">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="ref_Junk_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Claim_Pro__ref_E__5DD5DC5C" refer="dbo_Event__Constraint1">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="ref_Event_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Claim_Pro__ref_P__5A054B78" refer="dbo_Customer_Constraint1">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="ref_Perpretator_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Claim_Pro__ref_S__5BED93EA" refer="dbo_Date__Constraint1">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="ref_Submission_Date_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Claim_Pro__ref_C__5911273F" refer="dbo_Car_Constraint1">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="ref_Car_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Claim_Pro__ref_F__5CE1B823" refer="dbo_Date__Constraint1">
+          <xs:selector xpath=".//dbo_Claim_Processing" />
+          <xs:field xpath="ref_Finish_Date_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK__Car__ref_Prod_Da__44160A59" refer="dbo_Date__Constraint1">
+          <xs:selector xpath=".//dbo_Car" />
+          <xs:field xpath="ref_Prod_Date_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Insurance_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>
